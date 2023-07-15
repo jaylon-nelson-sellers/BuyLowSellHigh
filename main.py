@@ -1,10 +1,8 @@
+
 import yfinance as yf
 from datetime import datetime
-tickers = read_ticker_file("t.txt")
-stocks = get_stock_info(tickers)
-get_closest_prices(stocks)
 
-from array import array
+#import your tickers
 def read_ticker_file(text):
  with open(text, 'r') as file:
     data = file.read().splitlines()
@@ -41,3 +39,8 @@ def get_closest_prices(stocks):
     current_date = datetime.now().strftime('%Y-%m-%d')
     with open(f'stock_prices_{current_date}.txt', 'w') as f:
         f.write(content)
+
+
+tickers = read_ticker_file("t.txt")
+stocks = get_stock_info(tickers)
+get_closest_prices(stocks)
