@@ -1,4 +1,3 @@
-!pip install yfinance
 import yfinance as yf
 from datetime import datetime
 tickers = read_ticker_file("t.txt")
